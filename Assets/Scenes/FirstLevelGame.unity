@@ -216,48 +216,52 @@ PrefabInstance:
     - target: {fileID: 1819689857753417662, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
       propertyPath: type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1819689857753417662, guid: ab5a783cc3e424b899f7f733291f8bab,
+    - target: {fileID: 2756862417899649840, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-      propertyPath: plantPrefab
-      value: 
-      objectReference: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756862417899649840, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-    - target: {fileID: 1819689857753417662, guid: ab5a783cc3e424b899f7f733291f8bab,
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756862417899649840, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-      propertyPath: vitalisParticles
-      value: 
-      objectReference: {fileID: 2052127733}
-    - target: {fileID: 1819689857753417662, guid: ab5a783cc3e424b899f7f733291f8bab,
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903384221533330774, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-      propertyPath: infectedParticles
-      value: 
-      objectReference: {fileID: 2117348138}
+      propertyPath: m_RenderMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903384221533330774, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_NormalDirection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
       propertyPath: m_Name
       value: healthyPlant
       objectReference: {fileID: 0}
-    - target: {fileID: 6323182259858265526, guid: ab5a783cc3e424b899f7f733291f8bab,
-        type: 3}
-      propertyPath: m_Name
-      value: VitalisParticles
-      objectReference: {fileID: 0}
     - target: {fileID: 6371014905027617344, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.272
+      value: -12.358
       objectReference: {fileID: 0}
     - target: {fileID: 6371014905027617344, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.873
+      value: 1.934
       objectReference: {fileID: 0}
     - target: {fileID: 6371014905027617344, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.829
+      value: -14.067
       objectReference: {fileID: 0}
     - target: {fileID: 6371014905027617344, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
@@ -294,20 +298,100 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7481298953674544472, guid: ab5a783cc3e424b899f7f733291f8bab,
+    - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-      propertyPath: m_Name
-      value: InfectedParticles
+      propertyPath: ShapeModule.angle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-      propertyPath: playOnAwake
-      value: 1
+      propertyPath: ShapeModule.radius.value
+      value: 0.614103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 15.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7906762589110719562, guid: ab5a783cc3e424b899f7f733291f8bab,
         type: 3}
-      propertyPath: playOnAwake
-      value: 1
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906762589110719562, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.75484693
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.63311857
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.13046388
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1111132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -18.906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054112301001210429, guid: ab5a783cc3e424b899f7f733291f8bab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.841
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -482,6 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantPrefab: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
     type: 3}
+  hasSpawned: 0
 --- !u!4 &1372127720
 Transform:
   m_ObjectHideFlags: 0
@@ -794,18 +879,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd64f75f6253064295558cc41b5ed38, type: 3}
---- !u!198 &2052127733 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7906762589110719562, guid: ab5a783cc3e424b899f7f733291f8bab,
-    type: 3}
-  m_PrefabInstance: {fileID: 953827956}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &2117348138 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7686409050085026646, guid: ab5a783cc3e424b899f7f733291f8bab,
-    type: 3}
-  m_PrefabInstance: {fileID: 953827956}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
