@@ -10,16 +10,24 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f;
     public float jumpForce = 7f;
     public bool isGrounded;
-    [SerializeField] private Rigidbody playerRigidbody;
+    private Rigidbody playerRigidbody;
 
     private Vector3 moveDirection;
 
 
-    void Start()
+    void Awake()
     {
-        playerRigidbody = GetComponent<Rigidbody>();
+        if (playerRigidbody == null)
+        {
+            playerRigidbody = GetComponent<Rigidbody>();
+        }
 
+        if (playerRigidbody == null)
+        {
+            Debug.LogError("El Rigidbody no se encontró en el objeto " + gameObject.name);
+        }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -39,7 +47,7 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {   Debug.Log("Jump");
+        {   
             Jump();
         }
     }
