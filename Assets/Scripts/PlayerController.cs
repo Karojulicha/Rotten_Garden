@@ -65,4 +65,13 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, rotationSpeed * Time.fixedDeltaTime);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+        }
+    }
 }
