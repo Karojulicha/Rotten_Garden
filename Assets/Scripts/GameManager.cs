@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     {
         gridManager = FindObjectOfType<GridManager>();
         StartCoroutine(VerificarEstadoJuego()); // Inicia la verificación del estado del juego cada ciertos segundos
-        AudioManager.Instance.PlayMusic();
     }
 
     public void ChangeScene(string nameScene)
@@ -45,7 +44,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // Detiene el tiempo en el juego
         BotonPausa.SetActive(false); // Oculta el botón de pausa
         PausaPanel.SetActive(true); // Muestra el panel de pausa
-        AudioManager.Instance.StopMusic();
     }
 
     public void Reanudar()
@@ -54,7 +52,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f; // Restaura el tiempo normal
         BotonPausa.SetActive(true); // Muestra el botón de pausa
         PausaPanel.SetActive(false); // Oculta el panel de pausa 
-        AudioManager.Instance.PlayMusic();
     }
 
     public void Reiniciar()
