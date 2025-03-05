@@ -381,13 +381,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177991111}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14957896, y: 0.010163566, z: 0.0013911267, w: 0.9886966}
-  m_LocalPosition: {x: -6.65, y: 4.5, z: -16.46}
+  m_LocalRotation: {x: 0.35845384, y: 0.007026822, z: 0.007026822, w: 0.93349457}
+  m_LocalPosition: {x: 2.34, y: 7.43, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 17.202, y: 1.23, z: 0.347}
+  m_LocalEulerAnglesHint: {x: 42, y: 1.4, z: 1.4}
 --- !u!114 &1177991115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056879102}
   - component: {fileID: 2056879101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid_Terrain_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ MonoBehaviour:
     type: 3}
   grassFloorPrefab: {fileID: 8893107416376594760, guid: 3ed855da4bec0204f8598394629670c1,
     type: 3}
-  gridSize: 3
+  gridSize: 5
 --- !u!4 &2056879102
 Transform:
   m_ObjectHideFlags: 0

@@ -37,6 +37,11 @@ public class GridManager : MonoBehaviour
 
                 floor.SetActive(true);
 
+                if (floor.GetComponent<PlantSpawner>() == null)
+                {
+                    floor.AddComponent<PlantSpawner>();
+                }
+
             }
         }
     }

@@ -71,5 +71,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd64f75f6253064295558cc41b5ed38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731520938585733482}
   m_SourcePrefab: {fileID: 100100000, guid: 8cd64f75f6253064295558cc41b5ed38, type: 3}
+--- !u!1 &5083022531747083846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd64f75f6253064295558cc41b5ed38,
+    type: 3}
+  m_PrefabInstance: {fileID: 5353636319393893143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &731520938585733482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083022531747083846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ef3f64f6aff4ccb8f7b4230ec18cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthyPlantPrefab: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
+    type: 3}
+  infectedPlantPrefab: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
+    type: 3}
+  vitalisPlantPrefab: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
+    type: 3}

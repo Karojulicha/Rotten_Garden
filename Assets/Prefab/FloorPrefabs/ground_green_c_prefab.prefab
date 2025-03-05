@@ -70,8 +70,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8cd64f75f6253064295558cc41b5ed38,
         type: 3}
-      propertyPath: m_TagString
-      value: Floor
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80,7 +80,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd64f75f6253064295558cc41b5ed38,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8526137822065565085}
+      addedObject: {fileID: 8730008206416201459}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd64f75f6253064295558cc41b5ed38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6113541731881084307}
   m_SourcePrefab: {fileID: 100100000, guid: 8cd64f75f6253064295558cc41b5ed38, type: 3}
 --- !u!1 &8130917984140450456 stripped
 GameObject:
@@ -88,7 +92,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8941821203950856137}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8526137822065565085
+--- !u!114 &8730008206416201459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130917984140450456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ef3f64f6aff4ccb8f7b4230ec18cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthyPlantPrefab: {fileID: 5477100107988819536, guid: ab5a783cc3e424b899f7f733291f8bab,
+    type: 3}
+--- !u!65 &6113541731881084307
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
