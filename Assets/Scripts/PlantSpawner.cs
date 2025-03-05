@@ -27,7 +27,7 @@ public class PlantSpawner : MonoBehaviour
         float randomValue = Random.value * 100;
 
         if (randomValue < 50) return PlantType.healthy;
-        else if (randomValue < 40) return PlantType.vitalis;
+        else if (randomValue < 60) return PlantType.vitalis;
         else return PlantType.infected;
     }
 }

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 5464c15ff9c6ca04cb5790c1773e76fa, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 175371dcdff39b746936cb654a511129, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -3200,13 +3200,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444179373}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6833661, y: -0.18291795, z: 0.18310735, w: 0.6826592}
-  m_LocalPosition: {x: 2.65, y: 10.84, z: -4.59}
-  m_LocalScale: {x: 1.7778, y: 4.3328543, z: 1.7778}
+  m_LocalRotation: {x: 0.6950898, y: -0.18126525, z: 0.1491656, w: 0.6795165}
+  m_LocalPosition: {x: 2.45, y: 14.84, z: 2.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 89.948, y: 0, z: 30.03}
+  m_LocalEulerAnglesHint: {x: 87.109, y: -129.397, z: -102.364}
 --- !u!114 &1444179376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4437,24 +4437,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2434079915335833595, guid: e8c6b5fcad6630a4582fcadbe682cdf1,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 2810572527744826922, guid: 5943d0dbad357d5499fa462c0324ce7d,
-        type: 2}
-    - target: {fileID: 2708330206951477664, guid: e8c6b5fcad6630a4582fcadbe682cdf1,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -3490565398880947365, guid: 5943d0dbad357d5499fa462c0324ce7d,
-        type: 2}
-    - target: {fileID: 4235406082087338303, guid: e8c6b5fcad6630a4582fcadbe682cdf1,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 2142409007057790515, guid: 5943d0dbad357d5499fa462c0324ce7d,
-        type: 2}
     - target: {fileID: 4948775046587533810, guid: e8c6b5fcad6630a4582fcadbe682cdf1,
         type: 3}
       propertyPath: m_Name
@@ -4510,17 +4492,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6715817260531144506, guid: e8c6b5fcad6630a4582fcadbe682cdf1,
-        type: 3}
-      propertyPath: musicClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1c4c19305fbff0040af12f079c268019, type: 3}
-    - target: {fileID: 6715817260531144506, guid: e8c6b5fcad6630a4582fcadbe682cdf1,
-        type: 3}
-      propertyPath: masterAudio
-      value: 
-      objectReference: {fileID: 24100000, guid: 5943d0dbad357d5499fa462c0324ce7d,
-        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

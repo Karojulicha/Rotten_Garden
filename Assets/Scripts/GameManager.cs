@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(string nameScene)
     {
         SceneManager.LoadScene(nameScene); // Cambia la escena cuando se llama a esta función
+        Time.timeScale = 1;
     }
 
     private void Update()
@@ -100,14 +101,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f; // Detiene el juego
         VictoriaPanel.SetActive(true); // Muestra el panel de victoria
-        Debug.Log("¡Has ganado!"); // Mensaje en la consola para depuración
     }
 
     private void MostrarDerrota()
     {
         Time.timeScale = 0f; // Detiene el juego
         DerrotaPanel.SetActive(true); // Muestra el panel de derrota
-        Debug.Log("Has perdido."); // Mensaje en la consola para depuración
     }
 
     public void SiguienteNivel()
