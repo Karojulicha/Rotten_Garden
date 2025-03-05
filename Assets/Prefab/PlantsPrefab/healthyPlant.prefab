@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1053657452730364866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6231926474878900593}
   - component: {fileID: 4569618033971004204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8086279249390020505}
   - component: {fileID: 1819689857753417662}
   - component: {fileID: 7327048902450657003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: healthyPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.272, y: 1.873, z: -13.829}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6231926474878900593}
@@ -204,6 +204,7 @@ MonoBehaviour:
   plantPrefab: {fileID: 5477100107988819536}
   infectedParticles: {fileID: 7686409050085026646}
   vitalisParticles: {fileID: 7906762589110719562}
+  level: 2
 --- !u!95 &7327048902450657003
 Animator:
   serializedVersion: 5
@@ -236,7 +237,7 @@ GameObject:
   - component: {fileID: 2756862417899649840}
   - component: {fileID: 7906762589110719562}
   - component: {fileID: 7134402400947395460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VitalisParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5066,7 +5067,7 @@ GameObject:
   - component: {fileID: 8963725373212627657}
   - component: {fileID: 7756257108845883603}
   - component: {fileID: 3389807441460405274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5175,7 +5176,7 @@ GameObject:
   - component: {fileID: 8054112301001210429}
   - component: {fileID: 7686409050085026646}
   - component: {fileID: 4903384221533330774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InfectedParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10003,7 +10004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2327098889079640225}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plant_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10034,7 +10035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4867289363432136691}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
