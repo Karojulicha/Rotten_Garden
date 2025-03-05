@@ -204,7 +204,7 @@ MonoBehaviour:
   plantPrefab: {fileID: 5477100107988819536}
   infectedParticles: {fileID: 7686409050085026646}
   vitalisParticles: {fileID: 7906762589110719562}
-  level: 2
+  level: 1
 --- !u!95 &7327048902450657003
 Animator:
   serializedVersion: 5

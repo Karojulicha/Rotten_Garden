@@ -3359,7 +3359,7 @@ MonoBehaviour:
     type: 3}
   grassFloorPrefab: {fileID: 8893107416376594760, guid: 3ed855da4bec0204f8598394629670c1,
     type: 3}
-  gridSize: 5
+  gridSize: 3
 --- !u!4 &2056879102
 Transform:
   m_ObjectHideFlags: 0
