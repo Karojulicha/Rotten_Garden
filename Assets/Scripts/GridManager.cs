@@ -6,15 +6,15 @@ public class GridManager : MonoBehaviour
 {
     public GameObject floorPrefab;
     public GameObject floorPrefabTwo;
-
     public GameObject grassFloorPrefab;
     private Vector3 floorSize;
     public int gridSize;
     private List<GameObject> floorTerrain = new List<GameObject>();
     void Start()
     {
-        floorSize = floorPrefab.GetComponent<Renderer>().bounds.size;
+        floorSize = floorPrefabTwo.GetComponent<MeshRenderer>().bounds.size;
         GenerationGridTerrain();
+        GenerateBorder();
     }
 
     void GenerationGridTerrain()
@@ -37,15 +37,24 @@ public class GridManager : MonoBehaviour
 
                 floor.SetActive(true);
 
+            }
+        }
+    }
 
-                // Instance the border floor, checking which zone is on the edge
-                if (x == 0 || x == gridSize - 1 || z == 0 || z == gridSize - 1)
+    void GenerateBorder()
+    {
+        // Generar el borde alrededor de la grilla
+        for (int x = -1; x <= gridSize; x++)
+        {
+            for (int z = -1; z <= gridSize; z++)
+            {
+                // Si está en la zona del borde (fuera de la grilla principal)
+                if (x == -1 || x == gridSize || z == -1 || z == gridSize)
                 {
                     GameObject borderFloor = GetInstantiateFloor(grassFloorPrefab);
                     borderFloor.transform.position = new Vector3(x * floorSize.x, 0, z * floorSize.z);
                     borderFloor.SetActive(true);
                 }
-
             }
         }
     }
