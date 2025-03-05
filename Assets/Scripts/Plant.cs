@@ -46,18 +46,17 @@ public class Planta : MonoBehaviour
         {
             case PlantType.infected:
                 infectedParticles?.Play();
-                Debug.Log("Planta infectada activada en " + gameObject.name);
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxWorms);
                 break;
 
             case PlantType.vitalis:
                 if (!vitalisParticles.isPlaying)
                     vitalisParticles?.Play();
-                Debug.Log("Planta vitalis activada en " + gameObject.name);
-                PurifyNearbyPlants(); // Llama la particula
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxHealing);
+                PurifyNearbyPlants(); 
                 break;
 
             case PlantType.healthy:
-                Debug.Log("Planta sana, sin partículas.");
                 break;
         }
     }
