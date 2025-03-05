@@ -46,6 +46,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
+
     void GenerateBorder()
     {
         // Generar el borde alrededor de la grilla
@@ -58,6 +59,12 @@ public class GridManager : MonoBehaviour
                 {
                     GameObject borderFloor = GetInstantiateFloor(grassFloorPrefab);
                     borderFloor.transform.position = new Vector3(x * floorSize.x, 0, z * floorSize.z);
+
+                    if (z == -1 || z == gridSize)
+                    {
+                        borderFloor.transform.Rotate(0, 90, 0);  // Rota 90 grados alrededor del eje Y
+                    }
+
                     borderFloor.SetActive(true);
                 }
             }
