@@ -1,21 +1,26 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-// Enum para definir los tipos de plantas posibles
 public enum PlantType { healthy, infected, vitalis }
 
 public class Planta : MonoBehaviour
 {
     public PlantType type;
     public GameObject plantPrefab; // Prefab de la planta
-    public ParticleSystem infectedParticles; // Partículas para plantas infectadas
-    public ParticleSystem vitalisParticles; // Partículas para plantas vitalis
+    public ParticleSystem infectedParticles;
+    public ParticleSystem vitalisParticles;
+    private int plantLayer;
 
-    public static int level = 1; // Nivel del juego 
-    private bool hasSpawned = false; // Evita múltiples clones
+    public int level = 2; // Nivel del juego
+    private bool hasSpawned = false; // Evita múltiples clones al mismo tiempo
+    public static int totalClones = 0; // Lleva la cuenta total de clones
+    public static int maxClones = 1; // Máximo de plantas permitidas
+
 
     void Start()
     {
-        // Buscar automáticamente las partículas en los hijos 
+        plantLayer = LayerMask.GetMask("Plant");
+        // Buscar automáticamente las partículas en los hijos
         if (infectedParticles == null)
             infectedParticles = transform.Find("InfectedParticles")?.GetComponent<ParticleSystem>();
 
@@ -25,14 +30,14 @@ public class Planta : MonoBehaviour
         ApplyEffect(); // Aplica efectos según el tipo de planta 
 
         // Solo clona otra planta si es sana o infectada
-        if ((type == PlantType.healthy || type == PlantType.infected) && !hasSpawned)
+        if (type == PlantType.infected || type == PlantType.healthy)
         {
-            hasSpawned = true; // Evita múltiples clones
-            SpawnAnotherPlant();
+            float delay = Random.Range(2f, 5f); // Retraso aleatorio para naturalidad
+            Invoke("SpawnAnotherPlant", delay);
         }
     }
 
-    void ApplyEffect()
+    public void ApplyEffect()
     {
         if (infectedParticles != null) infectedParticles.Stop();
         if (vitalisParticles != null) vitalisParticles.Stop();
@@ -53,31 +58,26 @@ public class Planta : MonoBehaviour
 
     void SpawnAnotherPlant()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(1f, 0, 0);
-
-        GameObject newPlant = Instantiate(plantPrefab, spawnPosition, Quaternion.identity);
-        Planta plantScript = newPlant.GetComponent<Planta>();
-
-        if (plantScript != null)
         {
-            plantScript.type = GetRandomPlantType(); // Asigna tipo basado en probabilidades
-            plantScript.ApplyEffect();
+            if (hasSpawned || totalClones >= maxClones) return; // Evita demasiados clones
+
+            Vector3 newPosition = transform.position + new Vector3(2f, 0, 0);
+            Debug.DrawRay(newPosition, Vector3.up * 10, Color.red, 10f);
+            Collider[] colliders = Physics.OverlapSphere(newPosition, 0.2f, plantLayer);
+            if (colliders.Length == 0) // Verifica espacio libre
+            {
+                GameObject newPlant = Instantiate(plantPrefab, newPosition, Quaternion.identity);
+                Planta newPlantScript = newPlant.GetComponent<Planta>();
+                hasSpawned = true;
+                totalClones++;
+                Debug.Log($"Planta clonada. Total: {totalClones}");
+            }
+            else
+            {
+                Debug.Log("No se clonó porque el espacio está ocupado.");
+            }
         }
+
     }
 
-    PlantType GetRandomPlantType()
-    {
-        float randomValue = Random.value * 100; // Valor entre 0 y 100
-
-        float healthyChance = 50;
-        float vitalisChance = 30;
-        float infectedChance = 20;
-
-        if (randomValue < healthyChance)
-            return PlantType.healthy;
-        else if (randomValue < healthyChance + vitalisChance)
-            return PlantType.vitalis;
-        else
-            return PlantType.infected;
-    }
 }

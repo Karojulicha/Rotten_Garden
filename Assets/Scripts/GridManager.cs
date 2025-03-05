@@ -37,6 +37,11 @@ public class GridManager : MonoBehaviour
 
                 floor.SetActive(true);
 
+                if (floor.GetComponent<PlantSpawner>() == null)
+                {
+                    floor.AddComponent<PlantSpawner>();
+                }
+
 
                 // Instance the border floor, checking which zone is on the edge
                 if (x == 0 || x == gridSize - 1 || z == 0 || z == gridSize - 1)
