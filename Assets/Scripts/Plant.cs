@@ -11,7 +11,7 @@ public class Planta : MonoBehaviour
     public ParticleSystem vitalisParticles;
     private int plantLayer;
 
-    public int level = 2; // Nivel del juego
+    public int level = 1; // Nivel del juego
     private bool hasSpawned = false; // Evita múltiples clones al mismo tiempo
     public static int totalClones = 0; // Lleva la cuenta total de clones
     public static int maxClones = 1; // Máximo de plantas permitidas
@@ -50,8 +50,14 @@ public class Planta : MonoBehaviour
                 break;
 
             case PlantType.vitalis:
-                vitalisParticles?.Play();
+                if (!vitalisParticles.isPlaying)
+                    vitalisParticles?.Play();
                 Debug.Log("Planta vitalis activada en " + gameObject.name);
+                PurifyNearbyPlants(); // Llama la particula
+                break;
+
+            case PlantType.healthy:
+                Debug.Log("Planta sana, sin partículas.");
                 break;
         }
     }
@@ -79,5 +85,40 @@ public class Planta : MonoBehaviour
         }
 
     }
+    void PurifyNearbyPlants()
+    {
+        float purifyRadius = 3f; // Define el radio de purificación
+        Collider[] nearbyPlants = Physics.OverlapSphere(transform.position, purifyRadius);
+        bool hasPurified = false; // se sabe si purificó alguna planta
 
+        foreach (Collider collider in nearbyPlants)
+        {
+            Planta otherPlant = collider.GetComponent<Planta>();
+            if (otherPlant != null && otherPlant.type == PlantType.infected)
+            {
+                otherPlant.type = PlantType.healthy; // Convierte en planta sana
+                otherPlant.ApplyEffect();
+                Debug.Log($"Planta {otherPlant.gameObject.name} purificada.");
+                hasPurified = true;
+            }
+        }
+
+        if (hasPurified)
+        {
+            // Esperar un breve momento antes de detener las partículas 
+            StartCoroutine(StopVitalisParticles());
+            Debug.Log($"{gameObject.name} ha purificado y ahora es una planta sana.");
+        }
+    }
+
+    private System.Collections.IEnumerator StopVitalisParticles()
+    {
+        yield return new WaitForSeconds(1f); // Espera 1 segundo antes de detener partículas
+        if (type == PlantType.vitalis)
+        {
+            type = PlantType.healthy; // Convertir en planta sana después de purificar
+            vitalisParticles?.Stop();
+            ApplyEffect();
+        }
+    }
 }
