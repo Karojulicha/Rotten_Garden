@@ -11,13 +11,15 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfxSource;
     public AudioSource uiSource;
 
-    [Header("Audio Mixer")]
-    public AudioMixer audioMixer;
+    [Header("Master Audio")]
+    [SerializeField] AudioMixer masterAudio;
+    [Range(-5, 5)]
 
     [Header("Audio Clips")]
     public AudioClip buttonClick;
     public AudioClip sfxHealing;
     public AudioClip sfxWorms;
+    public AudioClip musicClip;
 
     void Awake()
     {
@@ -34,21 +36,35 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayMusic();
+        musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+        sfxSource = transform.GetChild(1).GetComponent<AudioSource>();
+        uiSource = transform.GetChild(2).GetComponent<AudioSource>();
+        InitialPlayMusic(musicClip);
     }
 
-    public void PlayMusic()
-    {
-        if (!musicSource.isPlaying)
-        {
-            musicSource.Play();
-        }
-    }
 
-    public void StopMusic()
+    void InitialPlayMusic(AudioClip audioClip)
     {
         musicSource.Stop();
+        musicSource.clip = audioClip;
+        musicSource.Play();
+        musicSource.loop = true;
+
     }
+
+
+    // public void MuteAll()
+    // {
+    //     isMute = !isMute;
+    //     if (isMute)
+    //     {
+    //         master.SetFloat("Master", -80f);
+    //     }
+    //     else
+    //     {
+    //         master.SetFloat("Master", 0f);
+    //     }
+    // }
 
     public void PlaySFX(AudioClip clip)
     {
@@ -62,17 +78,17 @@ public class AudioManager : MonoBehaviour
 
     public void setMusicVolume(float volume)
     {
-        audioMixer.SetFloat("VolumeMusic", Mathf.Log10(volume) * 20);
+        masterAudio.SetFloat("VolumeMusic", Mathf.Log10(volume) * 20);
     }
 
     public void setSfxVolume(float volume)
     {
-        audioMixer.SetFloat("VolumeSfx", Mathf.Log10(volume) * 20);
+        masterAudio.SetFloat("VolumeSfx", Mathf.Log10(volume) * 20);
     }
 
     public void setUIvolume(float volume)
     {
-        audioMixer.SetFloat("VolumeUi", Mathf.Log10(volume) * 20);
+        masterAudio.SetFloat("VolumeUi", Mathf.Log10(volume) * 20);
     }
 
 }
